@@ -1,0 +1,34 @@
+{
+	"name": "AzureSqlMITable3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "smil_dw_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlMITable",
+		"schema": [
+			{
+				"name": "operator",
+				"type": "nvarchar"
+			},
+			{
+				"name": "salesdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "latest_submit_time",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sme_veh_Bynation_UpdateTime"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

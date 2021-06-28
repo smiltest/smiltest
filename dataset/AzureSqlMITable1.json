@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlMITable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "smil_dw_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlMITable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sme_veh_Bynation_UpdateTime"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

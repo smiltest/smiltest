@@ -1,0 +1,9 @@
+{
+	"name": "Test-Data-Factory-Smildb",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "027ae3b3-39ea-459b-be6e-db6e4ad69525",
+		"tenantId": "716782d5-2807-4dcc-9839-f0c4294bc779"
+	}
+}

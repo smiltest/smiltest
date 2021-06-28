@@ -1,0 +1,57 @@
+{
+	"name": "sp_update_veh",
+	"properties": {
+		"activities": [
+			{
+				"name": "sp_update_veh_stock_generalizedVehicle_dd",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[sp_update_veh_stock_generalizedVehicle_dd]"
+				},
+				"linkedServiceName": {
+					"referenceName": "smil_dw_test",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "sp_update_sme_veh_otd_stock",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "sp_update_veh_stock_generalizedVehicle_dd",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[sp_update_sme_veh_otd_Stock]"
+				},
+				"linkedServiceName": {
+					"referenceName": "smil_dw_test",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-04-30T02:33:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
