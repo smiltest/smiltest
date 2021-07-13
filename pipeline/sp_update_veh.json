@@ -48,6 +48,33 @@
 					"referenceName": "smil_dw_test",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "sp_update_sme_veh_sales_funnel_all",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "sp_update_sme_veh_otd_stock",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "sp_update_sme_veh_sales_funnel_all"
+				},
+				"linkedServiceName": {
+					"referenceName": "smil_dw_test",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": [],
