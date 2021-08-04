@@ -50,7 +50,7 @@
 				}
 			},
 			{
-				"name": "sp_update_sme_veh_sales_funnel_all",
+				"name": "Stored procedure1",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -69,7 +69,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "sp_update_sme_veh_sales_funnel_all"
+					"storedProcedureName": "[dbo].[sp_update_dim_all]"
 				},
 				"linkedServiceName": {
 					"referenceName": "smil_dw_test",
