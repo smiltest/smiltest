@@ -50,7 +50,7 @@
 				}
 			},
 			{
-				"name": "Stored procedure1",
+				"name": "sp_update_dim_all",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
