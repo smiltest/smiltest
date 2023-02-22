@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "etl_system_carryUpdateFlow_GDS_dd",
+				"name": "sp_update_veh_stock_generalizedVehicle_dd",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [],
 				"policy": {
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[etl_system_carryUpdateFlow_GDS_dd]"
+					"storedProcedureName": "dbo.sp_update_veh_stock_generalizedVehicle_dd"
 				},
 				"linkedServiceName": {
 					"referenceName": "smil_dw_test",
@@ -27,7 +27,7 @@
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
-						"activity": "etl_system_carryUpdateFlow_GDS_dd",
+						"activity": "sp_update_veh_stock_generalizedVehicle_dd",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -50,7 +50,7 @@
 				}
 			},
 			{
-				"name": "sp_update_dim_all",
+				"name": "sp_update_smil_veh_ct_database",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -69,7 +69,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[sp_update_dim_all]"
+					"storedProcedureName": "[dbo].[sp_update_smil_veh_ct_database"
 				},
 				"linkedServiceName": {
 					"referenceName": "smil_dw_test",
